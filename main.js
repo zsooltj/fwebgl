@@ -305,13 +305,10 @@ function drawScene(gl, program, viewProjMatrix, u_MvpMatrix, u_NormalMatrix) {
       console.log("Failed to set the vertex information");
       return;
     }
-    // g_modelMatrix.setTranslate(0, 0, 0);
 
     g_modelMatrix.rotate(-rotateCylinderAngle, 0, 1, 0);
-
     g_modelMatrix.translate(moveAllX, -1.0, moveAllY - move - moveCube);
     g_modelMatrix.rotate(rotateCubeAngle, 0, 1, 0);
-
     g_modelMatrix.scale(scaleCube, scaleCube, scaleCube);
 
     addBox(gl, cubeBuffer, viewProjMatrix, u_MvpMatrix, u_NormalMatrix);
