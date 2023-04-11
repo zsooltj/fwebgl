@@ -1,0 +1,38 @@
+html,
+body {
+  margin: 0;
+  background: black;
+}
+
+footer {
+  background: #dadada;
+  min-height: 100px;
+}
+
+.flex {
+  display: flex;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+p {
+  margin: 0;
+  padding: 2px;
+}
+
+.side {
+  background: white;
+  min-height: 100vh;
+  min-width: 300px;
+}
+
+.side > div {
+  padding: 6px;
+}

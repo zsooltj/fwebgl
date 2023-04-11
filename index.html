@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="flex">
+      <div class="side">
+        <div>
+          <h1>Instructions</h1>
+        </div>
+        <div>
+          <h2>Camera controls</h2>
+          <hr />
+          <p>YAW: <b>X/C</b></p>
+          <p>Pitch - TO BE FIXED: <b>V/B</b></p>
+          <p style="color: red">Roll - TO BE FIXED: <b>N/M</b></p>
+        </div>
+        <div>
+          <h2>Light controls</h2>
+          <hr />
+          <p>Move light: <b>U/I/O/P/J/K</b></p>
+          <div>
+            Color:
+            <input type="color" id="color" />
+          </div>
+          <div>
+            Light intensity
+            <input
+              type="range"
+              name=""
+              id="intensity"
+              value="0.7"
+              min="0"
+              max="1"
+              step="0.01"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h2>Other controls</h2>
+          <hr />
+          <p>Move hierarchy: <b>W/A/S/D</b></p>
+
+          <p>Move cylinder back/forth: <b>Q/E</b></p>
+
+          <p>Rotate cylinder: <b>3/4</b></p>
+          <p>Scale cube: <b>R/T</b></p>
+        </div>
+      </div>
+      <div>
+        <canvas id="webgl" antialias="true">
+          Please use a browser that supports "canvas"
+        </canvas>
+      </div>
+    </div>
+
+    <!-- these libraries are just to help with a little linear algebra, and create + load shaders, nothing more -->
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/cuon-utils.js"></script>
+    <script src="./lib/cuon-matrix.js"></script>
+
+    <script src="./functions.js"></script>
+    <script src="./assets/shaders.js"></script>
+    <script src="./assets/teapot.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+      var canvas = document.getElementById("webgl");
+      canvas.width = window.innerWidth - 320;
+      canvas.height = window.innerHeight - 20;
+      main();
+    </script>
+  </body>
+</html>
