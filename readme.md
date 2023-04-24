@@ -1,8 +1,5 @@
-### Easy local hosting:
 
-https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
-
-# webGL exercise
+# webGL exercise 
 ## Hierarchy, ligts and camera control
 Create a 3D multi-component object with at least three levels of hierarchy with hierarchically and independently transformable components; Set up a camera and light control mechanism
 Use HTML or Javascript, please, no other language allowed.
